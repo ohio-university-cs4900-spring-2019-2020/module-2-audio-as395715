@@ -1,5 +1,7 @@
 module-2-audio-as395715
 
+Updated 2/18: Fixed local file paths to find sounds
+
 2D sound will play on keypress: Key 1
 
 3D sound will play on keypress: Key 3
