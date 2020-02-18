@@ -211,8 +211,9 @@ void Aftr::GLViewNewModule::loadMap()
 
    std::string shinyRedPlasticCube( ManagerEnvironmentConfiguration::getSMM() + "/models/cube4x4x4redShinyPlastic_pp.wrl" );
    std::string wheeledCar( ManagerEnvironmentConfiguration::getSMM() + "/models/rcx_treads.wrl" );
-   std::string grass( ManagerEnvironmentConfiguration::getSMM() + "/models/moonFloor400x400_pp.wrl" );
+   std::string grass( ManagerEnvironmentConfiguration::getLMM() + "/models/moonFloor400x400_pp.wrl" );
    std::string human( ManagerEnvironmentConfiguration::getSMM() + "/models/human_chest.wrl" );
+   //std::string astro( ManagerEnvironmentConfiguration::getLMM() + "/models/Astronaut.obj" );
    
    //SkyBox Textures readily available
    std::vector< std::string > skyBoxImageNames; //vector to store texture paths
@@ -270,7 +271,7 @@ void Aftr::GLViewNewModule::loadMap()
    grassSkin.setDiffuse( aftrColor4f( 1.0f, 1.0f, 1.0f, 1.0f ) ); //Diffuse color components (ie, matte shading color of this object)
    grassSkin.setSpecular( aftrColor4f( 0.4f, 0.4f, 0.4f, 1.0f ) ); //Specular color component (ie, how "shiney" it is)
    grassSkin.setSpecularCoefficient( 1000 ); // How "sharp" are the specular highlights (bigger is sharper, 1000 is very sharp, 10 is very dull)
-   wo->setLabel( "Grass" );
+   wo->setLabel( "Moon" );
    worldLst->push_back( wo );
 
    ////Create the infinite grass plane that uses the Open Dynamics Engine (ODE)
@@ -343,6 +344,14 @@ void Aftr::GLViewNewModule::loadMap()
    //actorLst->push_back( wo );
    //this->setActor( wo );
    //netLst->push_back( wo );
+    /*
+   wo = WO::New(astro, Vector(200,200,200));
+   wo->setPosition( Vector(50,50,10) );
+   wo->rotateAboutGlobalZ(225);
+   wo->moveRelative((25, 25, 10));
+   wo->setLabel( "Astronaut" );
+   worldLst->push_back( wo );
+   */
    
    createNewModuleWayPoints();
 }
