@@ -9,7 +9,7 @@ Switch {
 	DEF Plane_002
 	Separator {
 		Texture2 {
-			filename //../../../shared/mm/models/moonfloor.bmp
+			filename //../../../NewModule/mm/models/moonfloor.bmp
 			wrapS REPEAT 
 			wrapT REPEAT 
 		}
